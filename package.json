@@ -1,0 +1,13 @@
+{
+  "name": "mobile-reciept-scan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile + desktop employee expense reimbursement with receipt upload and multi-role approval",
+  "scripts": {
+    "dev": "npm run dev --prefix server & npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "setup": "npm install --prefix server && npm install --prefix client && npm run db:setup --prefix server",
+    "db:setup": "npm run db:setup --prefix server"
+  }
+}
