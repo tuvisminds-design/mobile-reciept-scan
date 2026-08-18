@@ -2,7 +2,20 @@
 
 Business Analyst portfolio website showcasing experience in AI automation, workflow analysis, product thinking, and BA case studies.
 
-**Live site:** [tuvisminds-design.github.io/madhwaraj-portfolio](https://tuvisminds-design.github.io/madhwaraj-portfolio/)
+**Target live URL:** [tuvisminds-design.github.io/madhwaraj-portfolio](https://tuvisminds-design.github.io/madhwaraj-portfolio/)
+
+## Deploy to madhwaraj-portfolio repo
+
+This code lives on branch `cursor/portfolio-bb45`. To push to the portfolio repo:
+
+```bash
+git clone https://github.com/tuvisminds-design/madhwaraj-portfolio.git
+cd madhwaraj-portfolio
+git pull https://github.com/tuvisminds-design/mobile-reciept-scan.git cursor/portfolio-bb45
+git push origin main
+```
+
+Then enable GitHub Pages: Settings → Pages → Source: GitHub Actions.
 
 ## Stack
 
