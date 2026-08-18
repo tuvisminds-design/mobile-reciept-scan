@@ -7,9 +7,9 @@ export function ExperienceSection({ items }: { items: Experience[] }) {
       {items.map((role) => (
         <article
           key={`${role.company}-${role.title}`}
-          className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
+          className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
         >
-          <div className="border-l-4 border-teal-600 bg-slate-50 px-6 py-5">
+          <div className="border-l-4 border-teal-600 bg-gradient-to-r from-slate-50 to-white px-6 py-5">
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
               <div>
                 <h3 className="text-lg font-semibold text-slate-900">

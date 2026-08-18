@@ -3,7 +3,7 @@ import { Section } from './Section'
 
 export function AboutSection() {
   return (
-    <Section id="about" title="About Me">
+    <Section id="about" eyebrow="01 — Introduction" title="About Me" className="bg-white">
       <div className="max-w-3xl space-y-4">
         <p className="text-lg leading-relaxed text-slate-700">{about.summary}</p>
         {about.details.map((para) => (

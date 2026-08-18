@@ -2,12 +2,12 @@ import { Section } from './Section'
 
 export function SkillsSection({ skills }: { skills: Record<string, string[]> }) {
   return (
-    <Section id="skills" title="Skills & Tools">
+    <Section id="skills" eyebrow="04 — Capabilities" title="Skills & Tools" className="bg-white">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {Object.entries(skills).map(([category, items]) => (
           <div
             key={category}
-            className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+            className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-teal-300 hover:shadow-md"
           >
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-teal-700">
               {category}

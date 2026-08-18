@@ -3,8 +3,8 @@ import { Section } from './Section'
 
 export function CertificationsSection({ items }: { items: Certification[] }) {
   return (
-    <Section id="certifications" title="Certifications">
-      <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+    <Section id="certifications" eyebrow="06 — Credentials" title="Certifications" className="bg-white">
+      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[600px] text-left text-sm">
             <thead>
@@ -17,7 +17,10 @@ export function CertificationsSection({ items }: { items: Certification[] }) {
             </thead>
             <tbody>
               {items.map((cert) => (
-                <tr key={cert.name} className="border-b border-slate-100 last:border-0">
+                <tr
+                  key={cert.name}
+                  className="border-b border-slate-100 transition-colors last:border-0 hover:bg-slate-50"
+                >
                   <td className="px-5 py-3.5 font-medium text-slate-800">{cert.name}</td>
                   <td className="px-5 py-3.5 text-slate-600">{cert.issuer}</td>
                   <td className="px-5 py-3.5 text-slate-600">{cert.platform}</td>
