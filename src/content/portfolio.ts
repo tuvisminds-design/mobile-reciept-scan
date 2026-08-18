@@ -49,6 +49,13 @@ export const personal = {
   drivePortfolio: 'https://drive.google.com/drive/folders/1XtlCmWl_YmXhqNf6ZkKpoZXRm5OqUls9',
 }
 
+export const highlights = [
+  { value: '1.5+', label: 'Years in AI & BA roles' },
+  { value: '12', label: 'BA case studies' },
+  { value: '8', label: 'Professional certifications' },
+  { value: '2', label: 'Business degrees' },
+]
+
 export const about = {
   summary:
     'Business Analyst with 1.5 years of experience in AI automation support, chatbot requirement gathering, and data analysis — looking to grow into AI Product Management at an early-stage startup.',

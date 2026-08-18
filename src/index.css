@@ -2,11 +2,19 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Inter", ui-serif, Georgia, serif;
+
+  --color-ink: #0b1120;
+  --color-ink-soft: #111c33;
   --color-navy: #0f172a;
   --color-navy-light: #1e293b;
-  --color-accent: #0d9488;
-  --color-accent-light: #14b8a6;
-  --color-gold: #b45309;
+
+  --color-brand: #0d9488;
+  --color-brand-light: #14b8a6;
+  --color-brand-soft: #99f6e4;
+
+  --color-accent: #b45309;
+  --color-accent-light: #f59e0b;
 }
 
 html {
@@ -16,5 +24,52 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
+  background-color: #f8fafc;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-brand);
+  color: #ffffff;
+}
+
+/* Subtle grid texture for the hero */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Scroll-reveal animation */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: reveal-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    animation: none;
+  }
 }

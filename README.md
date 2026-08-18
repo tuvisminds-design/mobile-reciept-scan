@@ -43,4 +43,6 @@ Case study documents are hosted on [Google Drive](https://drive.google.com/drive
 
 ## Profile Photo
 
-Replace the initials avatar by adding `public/profile.jpg` and updating the Hero component.
+Add your headshot at `public/profile.jpg` and it will appear automatically in the
+hero. Until that file exists, the hero gracefully falls back to an `MK` monogram —
+no code changes required. For best results use a square image (e.g. 600×600).

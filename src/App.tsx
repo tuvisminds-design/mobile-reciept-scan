@@ -36,10 +36,16 @@ export default function App() {
       <Hero />
       <main>
         <AboutSection />
-        <Section id="experience" title="Experience" icon={<BriefcaseIcon />}>
+        <Section
+          id="experience"
+          eyebrow="02 — Career"
+          title="Experience"
+          icon={<BriefcaseIcon />}
+          className="bg-white"
+        >
           <ExperienceSection items={experience} />
         </Section>
-        <Section id="projects" title="Projects & Case Studies">
+        <Section id="projects" eyebrow="03 — Selected Work" title="Projects & Case Studies">
           <ProjectsSection productProjects={productProjects} caseStudies={caseStudies} />
         </Section>
         <SkillsSection skills={skills} />

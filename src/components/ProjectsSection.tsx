@@ -2,7 +2,7 @@ import type { Project } from '../content/portfolio'
 
 function ProjectCard({ project }: { project: Project }) {
   const content = (
-    <div className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-teal-300 hover:shadow-md">
+    <div className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-teal-300 hover:shadow-lg">
       <h3 className="mb-2 font-semibold text-slate-900 group-hover:text-teal-700">
         {project.name}
       </h3>
@@ -46,7 +46,10 @@ export function ProjectsSection({
   return (
     <div className="space-y-12">
       <div>
-        <h3 className="mb-5 text-lg font-medium text-slate-800">Product Initiatives</h3>
+        <h3 className="mb-5 flex items-center gap-2 text-lg font-semibold text-slate-800">
+          <span className="h-4 w-1 rounded-full bg-teal-500" />
+          Product Initiatives
+        </h3>
         <div className="grid gap-5 sm:grid-cols-2">
           {productProjects.map((p) => (
             <ProjectCard key={p.name} project={p} />
@@ -54,7 +57,10 @@ export function ProjectsSection({
         </div>
       </div>
       <div>
-        <h3 className="mb-5 text-lg font-medium text-slate-800">BA Case Studies</h3>
+        <h3 className="mb-5 flex items-center gap-2 text-lg font-semibold text-slate-800">
+          <span className="h-4 w-1 rounded-full bg-teal-500" />
+          BA Case Studies
+        </h3>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map((p) => (
             <ProjectCard key={p.name} project={p} />
